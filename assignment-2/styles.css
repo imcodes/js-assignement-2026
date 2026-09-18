@@ -14,7 +14,7 @@ body {
   font-family: var(--font-family);
   margin: 0;
   padding: 0;
-  background-color: var(--light-bg)
+  background-color: var(--light-bg);
 }
 
 .site-header {
@@ -61,14 +61,7 @@ body {
   font-weight: bold;
   font-size: 1.2rem;
 }
-.car-cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-  padding: 20px;
-  max-width: 1200px;
-  margin: 0 auto;
-}
+
 .hero-content{
   display: grid;
   grid-template-columns: 2fr 1fr;
@@ -77,23 +70,40 @@ body {
   padding: 50px 20px;
   background-color: var(--accent-color);
 }
-.image-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.car-image {
-    width: 100%;
-    height: auto;
-}
-.logo-container{
-   display: flex;
+.badge{
+   display: inline-block;
    color: #000;
-   border-radius: 50%;
-}
+   border-radius: 9999px;
+   background-color: 	#ede8e1;
+   font-weight: 600;
+   padding: 4px 12px;
+   font-size: 14px;
+  }
 .button-container {
   display: flex;
   gap: 20px;
   margin-top: 20px;
 }
+
+.car-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 2rem;
+}
+
+
+.card-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+
+
+
+
+
+
+
 
