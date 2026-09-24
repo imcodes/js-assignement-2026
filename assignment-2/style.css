@@ -178,13 +178,16 @@ button, .btn {
     gap: 5px;
     cursor: pointer;
     
-    .hamburger span {
-        display: block;
+    .hamburger .fa {
+        display: none;
         width: 25px;
         height: 3px;
         background-color: var(--dark-text);
         border-radius: 2px;
     }
+}
+.Toggle-menu {
+    display: none;
 }
 
 .btn-secondary {
@@ -282,17 +285,28 @@ button, .btn {
             display: flex;
             
         }
-        .menu {
-            display: flex;
+        ul.menu {
+            
             flex-direction: column;
             position: absolute;
             top: 60px;
-            left: -100%;
-            width: 100%;
+            right: -100%;
+            width: 20%;
             background: #333;
             padding: 1rem 0;
-            transition: 0.3s;
+            transition: all 0.3s;
             text-align: center;
+            a {
+                color: #fff;
+            }
+        }
+        .menu li {
+            margin: 10px 0;
+        }
+        #Toggle-menu:checked ~ ul.menu {
+            
+            right: 0;
+            
         }
     }
     
