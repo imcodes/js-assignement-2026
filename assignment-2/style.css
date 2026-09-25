@@ -82,7 +82,7 @@ ul.menu {
 
 .hero .container {
     display: grid;
-    grid-template-columns: 2fr 2fr;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     justify-content: space-between;
     align-items: stretch;
     gap: 8rem;
@@ -172,6 +172,23 @@ button, .btn {
         cursor: pointer;
     }
 }
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    
+    .hamburger .fa {
+        display: none;
+        width: 25px;
+        height: 3px;
+        background-color: var(--dark-text);
+        border-radius: 2px;
+    }
+}
+.Toggle-menu {
+    display: none;
+}
 
 .btn-secondary {
     background-color: var(--dark-text);
@@ -218,12 +235,14 @@ button, .btn {
     background-color: var(--card-bg);
     overflow: hidden;
     box-shadow: var(--subtle-shadow) 0px 0.7rem 1.9rem 0.1rem;
+}
 
     .card-body{
         display: flex;
         flex-direction: column;
         gap: 1rem;
         padding: 1rem 0.5rem;
+       
     }
 
     img{
@@ -232,7 +251,64 @@ button, .btn {
         aspect-ratio: 4/3;
         object-fit: cover;
     }
-}
+    .badge {
+        background-color: #ede8e1;
+        color: #1a1a1a;
+        padding: 10px 30px;
+        border-radius: 50px;
+    }
+    .latest-models {
+        background-image: url('images/car-background-image.jpg');
+        background-size: cover;
+        background-position: center;
+        
+        .section-header *  { 
+            color: #fff;
+        }
+    }
+    footer  {
+       display: flex;
+       justify-content: space-between;
 
+    }
+    @media (max-width: 550px) {
+        
 
+        .hero-right {
+            background-position: center 40%;
+            height: 55vh;
+         }
+        
+         
+         
+         .hamburger {
+            display: flex;
+            
+        }
+        ul.menu {
+            
+            flex-direction: column;
+            position: absolute;
+            top: 60px;
+            right: -100%;
+            width: 20%;
+            background: #333;
+            padding: 1rem 0;
+            transition: all 0.3s;
+            text-align: center;
+            a {
+                color: #fff;
+            }
+        }
+        .menu li {
+            margin: 10px 0;
+        }
+        #Toggle-menu:checked ~ ul.menu {
+            
+            right: 0;
+            
+        }
+    }
+    
+    
 
