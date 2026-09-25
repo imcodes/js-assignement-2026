@@ -266,10 +266,10 @@ button, .btn {
             color: #fff;
         }
     }
-    footer  {
+    .footer-container  {
        display: flex;
        justify-content: space-between;
-
+       padding: 2rem 0;
     }
     @media (max-width: 550px) {
         
